@@ -25,8 +25,12 @@ def B(fname = filename):
     c = rep == [least]
 
     for i in range(12):
-        print(np.any(o[:,:i]))
+        chk = o[:,:i+1]
+        chk = np.all(chk, axis = 1)
+        print(np.any(chk))
+        #print(np.any(o[:][,i]))
         #print(o[:,:i])
+        #break
 
     #print(most,o[:,1])
     ans = ans >> 1
