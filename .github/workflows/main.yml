@@ -27,4 +27,7 @@ jobs:
         ./genAns.sh
 
     - name: Test answers
-      run: pytest
+      shell: bash
+      run: |
+        source venv/bin/activate
+        pytest
