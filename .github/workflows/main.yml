@@ -9,8 +9,11 @@ jobs:
         SESSION: ${{secrets.AOC_SESS}}
       shell: bash
       run: |
+        echo "Setting up session"
         echo $SESSION > session
+        echo "Getting inputs"
         ./getInputs.sh
+        echo "Generating answers"
         ./genAns.sh
 
 
