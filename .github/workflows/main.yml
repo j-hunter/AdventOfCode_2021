@@ -16,6 +16,13 @@ jobs:
         echo $SESSION > session
         echo "Getting inputs"
         ./getInputs.sh
+    - name: setup Python
+      shell: bash
+      run: ./setupPy.sh
+    
+    - name: Generate answers
+      shell: bash
+      run: |
         echo "Generating answers"
         ./genAns.sh
 
