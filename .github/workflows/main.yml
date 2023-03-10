@@ -1,0 +1,16 @@
+name: test-answers
+on: workflow_dispatch
+jobs:
+  test-ans:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get inputs
+      env:
+        SESSION: ${{secrets.AOC_SESS}}
+      shell: bash
+      run: |
+        echo $SESSION > session
+        ./getInputs.sh
+        ./genAns.sh
+
+
